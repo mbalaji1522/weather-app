@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="weather-card">
+        <h1 class="text-3xl font-bold mb-6">Live Weather</h1>
+
+        <div class="input-group">
+            <input type="text" id="city-input" placeholder="Enter city name" class="w-full">
+            <button id="get-weather-btn">Get Weather</button>
+        </div>
+
+        <div id="loading-indicator" class="loading-indicator">Fetching weather data...</div>
+        <div id="error-message" class="error-message"></div>
+
+        <div id="weather-display" class="weather-info mt-4 hidden">
+            <h2 id="city-name"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span>Humidity</span>
+                    <strong id="humidity"></strong>
+                </div>
+                <div class="detail-item">
+                    <span>Wind Speed</span>
+                    <strong id="wind-speed"></strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>
